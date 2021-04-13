@@ -51,7 +51,7 @@ CapacitiveSensor y2 = CapacitiveSensor(y2_pins[0],y2_pins[1]);
 #define num_questions 4
 
 char *questions[] = {"What is the Captial of Brazil?\n a.)Manaus\t b.) Sao Paulo\n c.)Rio de Janeiro\t d.)Brasilia",
-                     "What is the Captial of Australia?\n a.)Camberra\t b.) Sidney\n c.)Perth\t d.)Adelaide",
+                     "What is the Captial of Australia?\n a.)Canberra\t b.) Sidney\n c.)Perth\t d.)Adelaide",
                       "What is the Captial of Slovakia?\n a.)Zilina\t b.)Presov\n c.)Bratislava\t d.)Kosice",
                       "What is the Captial of Belgium?\n a.)Antwerp\t b.)Ghent\n c.)Brussels\t d.)Bruges"};
 
@@ -89,15 +89,16 @@ void loop()
     int y1_read = y1.capacitiveSensor(30);
     int y2_read = y2.capacitiveSensor(30);
 
-    //print all the values    
+    //print all the values
+    Serial.print("x1: ");   
     Serial.print(x1_read);
-    Serial.print('\t');
+    Serial.print("\tx2: ");
     Serial.print(x2_read);
-    Serial.print('\t');
+    Serial.print("\ty1: ");
 
 
     Serial.print(y1_read);
-    Serial.print('\t');
+    Serial.print("\ty2:");
     Serial.println(y2_read);
     return;
   } 
